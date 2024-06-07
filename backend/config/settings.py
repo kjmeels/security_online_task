@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # packages
     "rest_framework",
     "drf_spectacular",
+    "phonenumber_field",
 ]
 
 AUTH_USER_MODEL = 'users.User'
