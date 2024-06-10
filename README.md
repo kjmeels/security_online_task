@@ -16,6 +16,8 @@ POSTGRES_PORT=5432
 ```
 rest_framework
 drf_spectacular
+"phonenumber_field",
+"rest_framework_simplejwt",
 ```
 
 ### Локальный запуск проекта 
@@ -24,7 +26,7 @@ docker compose build
 docker compose up
 ```
 
-| Доступ  | Ссылка                        |
-|---------|-------------------------------|
-| Админка | http://0.0.0.0:8000/admin/    |
-| Сваггер | http://0.0.0.0:8000/api/docs/ |
+| Доступ  | Ссылка                          |
+|---------|---------------------------------|
+| Админка | http://127.0.0.1:8000/admin/    |
+| Сваггер | http://127.0.0.1:8000/api/docs/ |

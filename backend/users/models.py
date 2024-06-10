@@ -14,11 +14,12 @@ class User(AbstractUser):
         choices=RoleChoices.choices,
     )
     email = models.EmailField(verbose_name="Почта", blank=True)
-    phone = PhoneNumberField(verbose_name="Телефон", unique=True)
-
-    def __str__(self):
-        return self.username
+    phone = PhoneNumberField(verbose_name="Телефон", max_length=13, blank=True)
+    photo = models.ImageField(upload_to="u/u/p", verbose_name="Фото пользователя", null=True)
 
     class Meta:
         verbose_name: str = "Пользователь"
         verbose_name_plural: str = "Пользователи"
+
+    def __str__(self) -> str:
+        return f"Пользователь - {self.username}"

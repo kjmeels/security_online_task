@@ -7,6 +7,7 @@ Django==5.0.1
 django-filter==23.5
 django-phonenumber-field==7.3.0
 djangorestframework==3.14.0
+djangorestframework-simplejwt==5.3.1
 drf-spectacular==0.27.1
 factory-boy==3.3.0
 Faker==24.9.0
@@ -20,6 +21,7 @@ phonenumbers==8.13.38
 pillow==10.3.0
 pluggy==1.4.0
 psycopg2-binary==2.9.9
+PyJWT==2.8.0
 pytest==8.1.1
 python-dateutil==2.9.0.post0
 pytz==2024.1
