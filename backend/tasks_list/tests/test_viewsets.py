@@ -1,7 +1,7 @@
 from functools import partial
 
-from pytest import mark
 from django.urls import reverse
+from pytest import mark
 from rest_framework import status
 from rest_framework.test import APITestCase
 

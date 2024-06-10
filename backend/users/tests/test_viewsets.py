@@ -1,7 +1,5 @@
-from functools import partial
-
-from pytest import mark
 from django.urls import reverse
+from pytest import mark
 from rest_framework import status
 from rest_framework.test import APITestCase
 
@@ -70,7 +68,6 @@ class TestUserViewSet(APITestCase):
         with self.assertNumQueries(2):
             res = self.client.post(self.list_url, data=payload)
 
-        res_json = res.json()
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
         self.assertEqual(User.objects.count(), 2)
 
@@ -90,7 +87,6 @@ class TestUserViewSet(APITestCase):
         with self.assertNumQueries(2):
             res = self.client.post(self.list_url, data=payload)
 
-        res_json = res.json()
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
         self.assertEqual(User.objects.count(), 2)
 
@@ -110,6 +106,5 @@ class TestUserViewSet(APITestCase):
         with self.assertNumQueries(0):
             res = self.client.post(self.list_url, data=payload)
 
-        res_json = res.json()
         self.assertEqual(res.status_code, status.HTTP_403_FORBIDDEN)
         self.assertEqual(User.objects.count(), 1)
